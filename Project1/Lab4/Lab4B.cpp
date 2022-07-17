@@ -17,8 +17,8 @@ using namespace std;
 
 int main()
 {
-    int array1[1000];
-    int array2[1000];
+    int array1[100];
+    int array2[100];
     int input1;
     int input2;
     int counter1 = 0;
@@ -54,5 +54,6 @@ int main()
     {
         cout << array2[z] << " "; 
     }
+    cout << endl;
     return 0;
 }
