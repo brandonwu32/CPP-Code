@@ -38,14 +38,14 @@ int main()
     cout << "Smallest value = " << min << endl;
     cout << "Please enter a position " << endl;
     cin >> position;
-    cout << "Please enter a number to delete" << endl;
+    cout << "Please enter a number to insert" << endl;
     cin >> number;
     
     for (int i = size - 1 ; i > position - 1 ; i--)
     {
         values[i] = values[i-1];
     }
-    values[position-1] = number;
+    values[position] = number;
 
     for (int i = 0; i < size; ++i)
     {

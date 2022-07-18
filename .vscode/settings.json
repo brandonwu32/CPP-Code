@@ -4,6 +4,8 @@
         "__bit_reference": "cpp",
         "algorithm": "cpp",
         "iosfwd": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "iomanip": "cpp",
+        "ostream": "cpp"
     }
 }
