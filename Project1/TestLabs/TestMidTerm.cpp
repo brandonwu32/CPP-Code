@@ -46,19 +46,25 @@ int main()
     double input1;
     double input2;
     double input3;
-    cout << "What are your three numbers: ";
-    cin >> input1 >> input2 >> input3;
-    if (all_the_same(input1, input2, input3))
+    int i = 0;
+    while (i < 3)
     {
-        cout << "3 numbers are identical" << endl;
+        cout << "What are your three numbers: ";
+        cin >> input1 >> input2 >> input3;
+        if (all_the_same(input1, input2, input3))
+        {
+            cout << "3 numbers are identical" << endl;
+        }
+        else if (all_different(input1, input2, input3) && sorted(input1, input2, input3))
+        {
+            cout << "3 numbers are in (ascending) order" << endl;
+        }
+        else if (all_different(input1, input2, input3))
+        {
+            cout << "3 numbers are different" << endl;
+        }
+        i++;
     }
-    else if (all_different(input1, input2, input3) && sorted(input1, input2, input3))
-    {
-        cout << "3 numbers are in (ascending) order" << endl;
-    }
-    else if (all_different(input1, input2, input3))
-    {
-        cout << "3 numbers are different" << endl;
-    }
+    
     return 0;
 }
