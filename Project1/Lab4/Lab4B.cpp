@@ -49,6 +49,12 @@ int main()
             counter2++;
         }
     }
+    cout << "Your array is: { ";
+    for (int f = 0; f < counter1; f++)
+    {
+        cout << array1[f] << ",";
+    }
+    cout << " }" << endl;
     cout << "Your new array is " << endl;
     for (int z = 0; z < counter2; z++)
     {

@@ -66,11 +66,14 @@ int main()
         int total = row_total(counts, i);
         cout << setw(8) << total << endl;
     }
+    int grandtotal = 0;
     cout << setw(15) << "Total";
     for (int i = 0; i < 3; ++i)
     {
         cout << setw(8) << column_total(counts, 7, i);
+        grandtotal = grandtotal + column_total(counts, 7, i);
     }
+    cout << setw(8) << grandtotal;
     cout << endl;
     return 0;
 }
