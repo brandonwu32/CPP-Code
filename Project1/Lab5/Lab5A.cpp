@@ -16,3 +16,6 @@ Prolog
 using namespace std;
 
 void reverse(double* a, int size)
+{
+   
+}
