@@ -92,7 +92,7 @@ int main()
     {
         cout << array2[f] << " ";
     }
-    cout << " }" << endl;
+    cout << "}" << endl;
     cout << "Size of first array: " << array1_size << endl;
     cout << "Size of second array: " << array2_size << endl;
     if (equals(array1, array1_size, array2, array2_size))

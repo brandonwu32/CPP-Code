@@ -1,3 +1,14 @@
+/*
+Prolog
+   a. 	Program Description: Array connector
+   b. 	Author: Brandon Wu
+   c. 	Date: 07-20-22
+   d. 	Input variables: array1, add_array
+   e. 	Process Flow: using pointers to copy the contents of pointers in input arrays.
+   f. 	Output variables: final_array
+*/
+
+
 #include <iostream>
 #include <cmath>
 
