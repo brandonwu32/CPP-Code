@@ -7,7 +7,6 @@ Prolog
    e. 	Process Flow: counting algorithm and conditions
    f. 	Output variables: array1_size, array2_size, equals
 */
-
 #include <iostream>
 #include <cmath>
 #include <iomanip>
@@ -65,7 +64,7 @@ int main()
     cout << "Array 1 is: { ";
     for (int l = 0; l < array1_size; l++)
     {
-        cout << array1[l] << ",";
+        cout << array1[l] << " ";
     }
     cout << " }" << endl;
     cout << "What is the next array: " << endl;
@@ -91,7 +90,7 @@ int main()
     cout << "Array 2 is: { ";
     for (int f = 0; f < array2_size; f++)
     {
-        cout << array2[f] << ",";
+        cout << array2[f] << " ";
     }
     cout << " }" << endl;
     cout << "Size of first array: " << array1_size << endl;
