@@ -22,7 +22,7 @@ int main()
     double input2;
     int counter2 = 0;
     double add_array[10] = {};
-    double final_array[20] = {};
+    double* final_array = new double[20];
     double* pointer1 = NULL;
     double* pointer2 = NULL;
     double* final_pointer = NULL;
@@ -66,5 +66,7 @@ int main()
         cout << final_array[b] << " ";
     }
     cout << "}" << '\n';
+    delete[] final_array;
+    final_pointer = NULL;
     return 0;
 }
