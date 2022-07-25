@@ -3,25 +3,53 @@
 #include <string>
 
 using namespace std;
+/**
+   Reads name information, prints the name if total >= 0, and adjusts the total.
+   @param in_file the input stream
+   @param total the total percentage that should still be processed
+*/
+
+void process_name(ifstream& in_file, double& total)
+{
+   string name;
+   int count;
+   double percent;
+   in_file >> name >> count >> percent;
+   if (in_file.fail()) 
+   { 
+      return; 
+   } // Check for failure after each input
+   if (total > 0)
+   { 
+       cout << name << " "; 
+   }
+   total = total - percent;
+}
 
 int main()
-{
-    string number;
-    string name;
-    string ID;
-    string percent;
-    string name2;
-    string ID2;
-    string percent2;
-    ifstream in_file;
-    ofstream out_file;
-    in_file.open("baby.txt");
-    out_file.open("new.txt");
-    while (in_file >> number >> name >> ID >> percent >> name2 >> ID2 >> percent2)
-    {
-        out_file << number << name << ID << percent << name2 << ID2 << percent2 << endl;
-    }
-    in_file.close();
-    out_file.close();
-    return 0;
+{  
+   ifstream in_file;
+   in_file.open("baby.txt");
+   if (in_file.fail())
+   { 
+      return 0; 
+   } // Check for failure after opening
+
+   double boy_total = 50;
+   double girl_total = 50;
+   while (boy_total > 0 || girl_total > 0)
+   {
+      int rank;
+      in_file >> rank;
+      if (in_file.fail()) 
+      { 
+         return 0; 
+      } 
+      
+      cout << rank << " ";
+      process_name(in_file, boy_total);
+      process_name(in_file, girl_total);
+      cout << endl;
+  }
+return 0;
 }
