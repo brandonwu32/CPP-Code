@@ -19,7 +19,8 @@ int main()
     out_file.open("output.txt");
     while (in_file >> name >> value)
     {
-        cout << "Name is " << name << " and Value is " << value << endl;
+        cout << "Nmae is " << name << " and Value is " << value << endl;
+        out_file << "Name is " << name << " and Value is " << value << endl;
     }
     in_file.close();
     out_file.close();
