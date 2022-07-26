@@ -1,3 +1,13 @@
+/*
+Prolog
+   a. 	Program Description: Babyname top 50%
+   b. 	Author: Brandon Wu
+   c. 	Date: 07-26-22
+   d. 	Input variables: babynames.txt
+   e. 	Process Flow: File IO
+   f. 	Output variables: output.txt
+*/
+
 #include <iostream>
 #include <fstream>
 #include <string>
