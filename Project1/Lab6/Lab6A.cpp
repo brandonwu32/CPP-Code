@@ -9,7 +9,7 @@ using namespace std;
    @param total the total percentage that should still be processed
 */
 
-void process_name(ifstream& in_file, double& total)
+void process_name(ifstream& in_file, ofstream& output_file, double& total)
 {
    string name;
    int count;
@@ -21,7 +21,7 @@ void process_name(ifstream& in_file, double& total)
    } // Check for failure after each input
    if (total > 0)
    { 
-       cout << name << " "; 
+       output_file << name << " "; 
    }
    total = total - percent;
 }
@@ -29,7 +29,9 @@ void process_name(ifstream& in_file, double& total)
 int main()
 {  
    ifstream in_file;
-   in_file.open("baby.txt");
+   ofstream out_file;
+   out_file.open("output.txt");
+   in_file.open("babynames.txt");
    if (in_file.fail())
    { 
       return 0; 
@@ -37,6 +39,7 @@ int main()
 
    double boy_total = 50;
    double girl_total = 50;
+   int record_count = 0;
    while (boy_total > 0 || girl_total > 0)
    {
       int rank;
@@ -46,10 +49,17 @@ int main()
          return 0; 
       } 
       
-      cout << rank << " ";
-      process_name(in_file, boy_total);
-      process_name(in_file, girl_total);
-      cout << endl;
-  }
-return 0;
+      out_file << rank << " ";
+      if (girl_total > 0 || boy_total > 0)
+      {
+         record_count++;
+      }
+      process_name(in_file, out_file, boy_total);
+      process_name(in_file, out_file, girl_total);
+      out_file << endl;
+   }
+   cout << "Number of records processed: " << record_count << endl;
+   in_file.close();
+   out_file.close();
+   return 0;
 }
