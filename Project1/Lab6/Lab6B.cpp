@@ -1,11 +1,11 @@
 /*
 Prolog
-   a. 	Program Description: Babyname top 50%
+   a. 	Program Description: Random Number Columns
    b. 	Author: Brandon Wu
    c. 	Date: 07-26-22
-   d. 	Input variables: babynames.txt
+   d. 	Input variables: output file name
    e. 	Process Flow: File IO
-   f. 	Output variables: output.txt
+   f. 	Output variables: output file
 */
 
 #include <iostream>
@@ -55,5 +55,16 @@ int main()
     out_file << setw(8) << avg_array(column1);
     out_file << setw(8) << avg_array(column2);
     out_file.close();
+    cout << setw(10) << "Column 1";
+    cout << setw(10) << "Column 2" << endl;
+    for (int h = 0; h < 10; h++)
+    {
+        cout << setw(8)<< column1[h];
+        cout << setw(8) << column2[h] << endl;
+    }
+    cout << setw(22) << "Average of Columns" << endl;
+    cout << setw(8) << avg_array(column1);
+    cout << setw(8) << avg_array(column2);
+    cout << endl;
     return 0;
 }
