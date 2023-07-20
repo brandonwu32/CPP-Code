@@ -1,2 +1,2 @@
-# CPP-CSCI
-Mt.Sac Code
+# CPP-Code
+C++ files
